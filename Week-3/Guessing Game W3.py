@@ -27,4 +27,4 @@ guess3 = int (guess3)
 if random_number == guess3:
     print ('Success!')
 else:
-    print ('Better luck next time,' + name + '.') 
+    print ('Better luck next time,' + name + '!') 
