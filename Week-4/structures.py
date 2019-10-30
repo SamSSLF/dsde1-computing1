@@ -18,8 +18,8 @@ def first_and_last(the_list):
 # If "end" is greater then "beginning" or any of the indices is out of the
 # list, raise a "ValueError" exception. 
 def part_reverse(the_list, beginning, end):
-    
-    return # hint this i s incomplete
+    i = the_list[beginning,end]
+    return i[::-1] 
 
 
 
@@ -27,7 +27,8 @@ def part_reverse(the_list, beginning, end):
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
 # will return [0,1,2,3,3,3,4]. 
 def repeat_at_index(the_list, index):
-    return
+    i = the_list.insert(index, the_list[index]*index)
+    return i
 
 
 # Strings
