@@ -27,8 +27,9 @@ def part_reverse(the_list, beginning, end):
 # same value. For example if the_list = [0,1,2,3,4] and index = 3 the function
 # will return [0,1,2,3,3,3,4]. 
 def repeat_at_index(the_list, index):
-    i = the_list.insert(index, the_list[index]*index)
-    return i
+    for n in range(1,index):
+        the_list.insert(index, the_list[index])    
+    return the_list
 
 
 # Strings
@@ -36,14 +37,23 @@ def repeat_at_index(the_list, index):
 # write a function that checks whether the word is a palindrome, i.e. it reads
 # the same forward and backwards
 def palindrome_word(word):
-    return
+    reversed_word = word[::-1]
+    if reversed_word == word:
+        print("It's a palindrome!")
+    else:
+        print ('Not a palindrome.')
 
 # write a function that checks whether the sentence is a palindrome, i.e. it
 # read the same forward and backward. Ignore all spaces and other characters
 # like fullstops, commas, etc. Also do not consider whether the letter is
 # capital or not. 
 def palindrome_sentence(sentence):
-    return
+    sentence_edit = sentence.replace(' ','').replace(',','').replace('.','').lower()
+    if sentence_edit == sentence_edit[::-1]:
+        print('This sentence is a palindrome!')
+    else:
+        print('This sentence is not a palindrome.')
+
 
 # write a function that concatenates two sentences. First the function checks
 # whether the sentence meets the following criteria: it starts with a capital
@@ -52,8 +62,14 @@ def palindrome_sentence(sentence):
 # the end.  The concatenated sentence must have no white space at the beginning
 # or at the end and the must be exactly one space after the end of the first
 # sentence. 
-def concatenate_sentences(sentenece1, sentence2):
-    return
+def concatenate_sentences(sentence1, sentence2):
+    sentence1.strip()
+    sentence2.strip()
+    new_sentence = sentence1 + ' ' + sentence2
+    if new_sentence[0].isupper() and new_sentence[-1] = '.':
+        return new_sentence
+    else:
+        print('Please capitalze the first letter of your first sentence and add a full stop to the end of your last sentence.')
 
 
 # Dictionaries
