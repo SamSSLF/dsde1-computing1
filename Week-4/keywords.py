@@ -48,7 +48,6 @@ def list_average(list, avg_type = 'mean'):
     
     if avg_type == 'mode':
         
-        
     if avg_type == 'median':
         n = len(list)
         if n % 2 == 0: 
