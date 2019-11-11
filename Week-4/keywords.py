@@ -39,21 +39,24 @@ def welcome_message(user_name = '', place = ''):
 # if avg_type='median', return the median of this list
 
 def list_average(list, avg_type = 'mean'):
-    if avg_type = 'mean':
-        n_num = [1, 2, 3, 4, 5] 
-        n = len(n_num) 
-        get_sum = sum(n_num) 
+    if avg_type == 'mean':
+        n = len(list) 
+        get_sum = sum(list) 
         mean = get_sum / n 
         print("Mean / Average is: " + str(mean)) 
+        return mean
     
-    if avg_type = 'mode':
-    
-    if avg_type = 'median':
+    if avg_type == 'mode':
+        
+        
+    if avg_type == 'median':
+        n = len(list)
         if n % 2 == 0: 
-            median1 = n_num[n//2] 
-            median2 = n_num[n//2 - 1] 
+            median1 = list[n//2] 
+            median2 = list[n//2 - 1] 
             median = (median1 + median2)/2
         else: 
-            median = n_num[n//2] 
-        print("Median is: " + str(median)) 
+            median = list[n//2] 
     
+    print("Median is: " + str(median)) 
+    return median
